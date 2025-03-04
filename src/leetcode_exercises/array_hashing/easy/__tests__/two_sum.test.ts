@@ -1,39 +1,39 @@
-import { describe, test, expect } from "bun:test";
-import { TwoSum } from "../two_sum";
+import { describe, test, expect } from 'bun:test';
+import { TwoSum } from '../two_sum';
 
-describe("TwoSum", () => {
-  describe("Singleton Pattern", () => {
-    test("should maintain a single instance", () => {
+describe('TwoSum', () => {
+  describe('Singleton Pattern', () => {
+    test('should maintain a single instance', () => {
       const instance1 = TwoSum.getInstance();
       const instance2 = TwoSum.getInstance();
       expect(instance1).toBe(instance2);
     });
   });
 
-  describe("Solutions", () => {
+  describe('Solutions', () => {
     const solution = TwoSum.getInstance();
 
     const testCases = [
       {
-        name: "basic case",
+        name: 'basic case',
         nums: [2, 7, 11, 15],
         target: 9,
         expected: [0, 1],
       },
       {
-        name: "no solution",
+        name: 'no solution',
         nums: [1, 2, 3, 4],
         target: 10,
         expected: [],
       },
       {
-        name: "duplicate numbers",
+        name: 'duplicate numbers',
         nums: [3, 3],
         target: 6,
         expected: [0, 1],
       },
       {
-        name: "zero target",
+        name: 'zero target',
         nums: [0, 1, 2, 0],
         target: 0,
         expected: [0, 3],
@@ -41,9 +41,9 @@ describe("TwoSum", () => {
     ];
 
     const solutions = [
-      { name: "Brute Force", fn: solution.brute },
-      { name: "Two Pointers", fn: solution.twoPointers },
-      { name: "Hash Map", fn: solution.map },
+      { name: 'Brute Force', fn: solution.brute },
+      { name: 'Two Pointers', fn: solution.twoPointers },
+      { name: 'Hash Map', fn: solution.map },
     ];
 
     solutions.forEach(({ name, fn }) => {
@@ -56,17 +56,17 @@ describe("TwoSum", () => {
           });
         });
 
-        test("should handle empty array", () => {
+        test('should handle empty array', () => {
           expect(fn.call(solution, [], 1)).toEqual([]);
         });
 
-        test("should handle single element array", () => {
+        test('should handle single element array', () => {
           expect(fn.call(solution, [1], 1)).toEqual([]);
         });
       });
     });
 
-    test("solutions should complete within reasonable time", () => {
+    test('solutions should complete within reasonable time', () => {
       const largeArray = Array.from({ length: 10000 }, (_, i) => i);
       const target = 19998; // Sum of 9998 + 9999
       const MAX_BRUTE_TIME = 100; // ms

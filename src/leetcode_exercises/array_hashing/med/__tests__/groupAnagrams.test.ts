@@ -1,12 +1,12 @@
-import { describe, expect, test } from "bun:test";
-import { GroupAnagrams } from "../groupAnagrams";
+import { describe, expect, test } from 'bun:test';
+import { GroupAnagrams } from '../groupAnagrams';
 
-describe("GroupAnagrams", () => {
+describe('GroupAnagrams', () => {
   const groupAnagrams = GroupAnagrams.getInstance();
 
-  test("should group anagrams correctly", () => {
-    const input = ["eat", "tea", "tan", "ate", "nat", "bat"];
-    const expected = [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]];
+  test('should group anagrams correctly', () => {
+    const input = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
+    const expected = [['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']];
 
     const result = groupAnagrams.sorting(input);
 
@@ -17,11 +17,11 @@ describe("GroupAnagrams", () => {
     expect(sortedResult).toEqual(sortedExpected);
   });
 
-  test("should handle empty input array", () => {
+  test('should handle empty input array', () => {
     expect(groupAnagrams.sorting([])).toEqual([]);
   });
 
-  test("should handle array with single string", () => {
-    expect(groupAnagrams.sorting(["hello"])).toEqual([["hello"]]);
+  test('should handle array with single string', () => {
+    expect(groupAnagrams.sorting(['hello'])).toEqual([['hello']]);
   });
 });
