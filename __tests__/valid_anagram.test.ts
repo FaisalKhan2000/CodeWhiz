@@ -1,4 +1,4 @@
-import { ValidAnagram } from "../valid_anagram";
+import { ValidAnagram } from "../src/leetcode_exercises/array_hashing/easy/valid_anagram";
 import { describe, test, expect } from "bun:test";
 
 describe("ValidAnagram", () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { ValidPalindrome } from "../valid_palindrome";
+import { ValidPalindrome } from "../src/leetcode_exercises/two_pointers/easy/valid_palindrome";
 
 describe("ValidPalindrome", () => {
   const solution = ValidPalindrome.getInstance();

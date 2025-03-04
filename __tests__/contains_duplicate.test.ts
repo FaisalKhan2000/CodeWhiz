@@ -1,4 +1,4 @@
-import { ContainsDuplicate } from "../contains_duplicate";
+import { ContainsDuplicate } from "../src/leetcode_exercises/array_hashing/easy/contains_duplicate";
 import { describe, test, expect } from "bun:test";
 
 describe("ContainsDuplicate", () => {

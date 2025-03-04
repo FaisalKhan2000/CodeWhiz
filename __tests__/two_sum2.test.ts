@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, test } from "bun:test";
 
-import { TwoSum } from "../two_sum2";
+import { TwoSum } from "../src/leetcode_exercises/two_pointers/med/two_sum2";
 
 describe("TwoSum", () => {
   let twoSum: TwoSum;
