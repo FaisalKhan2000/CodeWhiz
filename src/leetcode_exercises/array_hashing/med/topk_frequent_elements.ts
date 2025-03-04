@@ -30,7 +30,4 @@ class TopKFrequent implements ITopKFrequent {
   }
 }
 
-const solution = TopKFrequent.getInstance();
-console.log(solution.hashmap([1, 1, 1, 2, 2, 3], 2));
-
 export { TopKFrequent };
